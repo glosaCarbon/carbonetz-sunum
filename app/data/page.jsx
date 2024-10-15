@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { FaLeaf, FaRecycle, FaWind, FaWater } from "react-icons/fa"; // FontAwesome'den ikonlar
 import { useFormik } from 'formik';
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
 
 function CBAMForm() {
   const router = useRouter();
@@ -31,11 +33,11 @@ function CBAMForm() {
 
   return (
     <div className="w-full bg-gradient-to-br from-green-800 via-blue-900 to-gray-900 min-h-screen text-white p-6 flex flex-col items-center justify-center">
-      <div className="absolute top-0 left-0 p-4 text-3xl font-bold">
-        CARBONETZ
+      <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+        <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
       </div>
       
-      <h1 className="text-4xl font-bold mb-8">CBAM Mevzuatına Göre Bilgiler</h1>
+      <h1 className="text-4xl font-bold mb-8 mt-12">CBAM Mevzuatına Göre Bilgiler</h1>
 
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-3xl space-y-6 text-black">
         

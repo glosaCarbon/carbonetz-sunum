@@ -4,6 +4,9 @@ import React from "react";
 import { FaLeaf, FaRecycle, FaWind, FaWater, FaChartBar } from "react-icons/fa";
 import { useFormik } from 'formik';
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
+
 
 const SKDMCalculator = () => {
 
@@ -17,12 +20,12 @@ const SKDMCalculator = () => {
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-green-800 via-blue-900 to-gray-900 text-white p-6">
       {/* Logo */}
-      <div className="absolute top-0 left-0 p-4 text-4xl font-bold">
-        CARBONETZ
+      <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+        <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
       </div>
 
       {/* Header */}
-      <h1 className="text-4xl font-semibold text-center mb-8">
+      <h1 className="text-4xl font-semibold text-center mb-8 mt-12">
         SKDM HESAPLAMA
       </h1>
 

@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { FaLeaf, FaRecycle, FaWind, FaIndustry, FaTruck, FaGlobe, FaBalanceScale } from 'react-icons/fa'; // Yeşil dönüşüm ve sürdürülebilirlik ikonları
 import { useFormik } from 'formik';
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
 
 function Dashboard() {
   const router = useRouter();
@@ -50,11 +52,11 @@ function Dashboard() {
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-green-800 via-blue-900 to-gray-900 p-6 text-white font-inter">
       {/* Logo */}
-      <div className="absolute top-0 left-0 p-4 text-4xl font-bold text-white">
-        CARBONETZ
+      <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+        <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
       </div>
 
-      <div className="container mx-auto p-6 bg-white rounded-lg shadow-2xl max-w-5xl text-black">
+      <div className="container mx-auto p-6 bg-white rounded-lg mt-12 shadow-2xl max-w-5xl text-black">
         <h1 className="text-3xl font-semibold text-center mb-8">SKDM Hesaplama Girdileri</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

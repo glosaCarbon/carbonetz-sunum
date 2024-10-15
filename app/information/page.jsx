@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaLeaf, FaRecycle, FaWind, FaWater } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Typed from 'typed.js';
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
 
 
 function App() {
@@ -87,8 +89,8 @@ function App() {
   return (
     <div className="w-full relative min-h-screen bg-gradient-to-br from-green-800 via-blue-900 to-gray-900 text-white p-4 flex flex-col items-center font-inter">
       {/* Carbonetz Markası */}
-      <div className="absolute top-0 left-0 p-4 text-4xl font-bold text-white">
-        CARBONETZ
+      <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+        <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
       </div>
 
       {/* Yeşil Dönüşüm İkonları Arka Planı */}
@@ -97,7 +99,7 @@ function App() {
       <FaWater className="absolute top-40 right-20 text-green-400 opacity-10 text-8xl" />
 
       {/* Ana İçerik */}
-      <div className="relative bg-white p-8 rounded-3xl shadow-2xl text-black w-full max-w-4xl z-10">
+      <div className="relative bg-white p-8 mt-14 rounded-3xl shadow-2xl text-black w-full max-w-4xl z-10">
         <h1 className="text-3xl font-semibold mb-6 text-center text-gray-900">
           Firmanızı Tanıyalım
         </h1>

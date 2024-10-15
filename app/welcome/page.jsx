@@ -4,7 +4,8 @@ import { AiOutlineSend } from "react-icons/ai";
 import { useFormik } from 'formik';
 import { FaLeaf, FaRecycle, FaGlobe } from "react-icons/fa"; // Yeşil dönüşüm ve sürdürülebilirlik ikonları
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
 
 function ChatPrompt() {  
   const router = useRouter();
@@ -28,8 +29,8 @@ function ChatPrompt() {
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-br from-green-800 via-blue-900 to-gray-900 text-white p-4 flex justify-center items-center font-inter">
       {/* Carbonetz Markası */}
-      <div className="absolute top-0 left-0 p-4 text-4xl font-bold text-white">
-        CARBONETZ
+      <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+        <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
       </div>
 
       {/* Yeşil Dönüşüm İkonları Arka Planı */}

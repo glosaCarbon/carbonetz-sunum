@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { FaLeaf, FaGlobe, FaRecycle, FaWind, FaWater, FaArrowAltCircleDown } from "react-icons/fa";
 import { AiOutlineFileText, AiOutlineCheckCircle, AiOutlineFileDone } from "react-icons/ai";
-import { useFormik } from 'formik';
+import Image from "next/image";
+import CarbonetzLogo from "@/assets/images/carbonetz-logo.png"
 
 function SKDMReport() {
   const [openSections, setOpenSections] = useState({});
@@ -13,7 +14,10 @@ function SKDMReport() {
 
   return (
     <div className="w-full min-h-screen py-8" style={{ backgroundImage: "url('/path/to/your/background.jpg')", backgroundSize: "cover", backgroundColor: '#004d40' }}>
-      <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-lg">
+      <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl mt-12 shadow-lg">
+        <div className="absolute top-1 left-1 p-4 text-4xl font-bold text-white">
+          <Image src={CarbonetzLogo} alt="Carbonetz" width={200} />
+        </div>
         <h1 className="text-4xl font-bold text-center text-green-600 mb-8">
           SKDM Uyumlu Nihai Rapor
         </h1>
