@@ -51,6 +51,13 @@ function App() {
 
   const handleSubmit = () => {
     console.log(answers)
+
+    dispatch(page2Request(values.companyDesc))
+      .unwrap()
+      .then(res => {
+        router.push("/information")
+      })
+
     router.push("/data")
   }
 
@@ -71,7 +78,7 @@ function App() {
         backSpeed: 25,
         onComplete: () => {
           setCurrentIndex((prevIndex) => prevIndex + 1);
-          setIsButtonShow(currentIndex == (dataArr.length-1) ? true : false)
+          setIsButtonShow(currentIndex == (dataArr.length - 1) ? true : false)
         },
       };
 
